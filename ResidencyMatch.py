@@ -100,11 +100,9 @@ class ResidencyMatch:
                         self.unmatchedHospitals.remove(bestHospital)
                         self.unmatchedResidents.pop(0)
                     else:
-                        for i in range(len(self.residentsMappings[currentResident])):
-                            hospital = self.residentsMappings[currentResident][i]
-                            if self.hospitalsMappings[hospital].index(currentResident) > self.residentsMappings[currentResident].index((self.matches[currentResident])):
-                                self.unmatchedHospitals.append((self.matches[currentResident])[0:1])
-                                (self.matches[currentResident]) = bestHospital
+                        if self.hospitalsMappings[bestHospital].index(currentResident) > self.residentsMappings[currentResident].index((self.matches[currentResident])):
+                            self.unmatchedHospitals.append((self.matches[currentResident])[0:1])
+                            (self.matches[currentResident]) = bestHospital
                 index += 1
 
 
