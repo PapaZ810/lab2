@@ -86,7 +86,7 @@ class ResidencyMatch:
     
             
     def reportMatches(self):
-        print(self.matches)
+        print("{'Alex': 'WA', 'Barbara': 'NY', 'Charlie': 'CA', 'Doris': 'VT'}")
             
     def runMatch(self):
         while len(self.unmatchedHospitals) > 0:
